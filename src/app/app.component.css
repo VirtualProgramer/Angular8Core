@@ -16,8 +16,7 @@ mat-sidenav-content {
 }
 
 .wc-toolbar {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 
 .wc-toolbar .wc-toolbar-toggle-btn {
@@ -25,11 +24,9 @@ mat-sidenav-content {
 }
 
 .wc-toolbar .wc-toolbar-btn-bar {
+    position: absolute;
+    right: 0;
     margin: 0 0.5em;
-}
-
-.wc-toolbar .wc-toolbar-btn-bar .wc-toolbar-btn {
-    /*margin-right: 7px;*/
 }
 
 .wc-sidebar-user {
