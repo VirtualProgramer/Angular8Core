@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Angular Material */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* 中文化，廣域設定 */
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.test-outline-red {
+    outline: 1px red solid;
+}
+
+.test-border-red {
+    border: 1px red solid;
+}
+
+.wc-font-zh {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.wc-router-outlet-container {
+    padding: 1em;
+}
