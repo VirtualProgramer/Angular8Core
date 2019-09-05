@@ -1,25 +1,5 @@
-<mat-toolbar color="primary" class="wc-toolbar">
-
-    <div class="wc-toolbar-title-bar">
-        <button mat-icon-button (click)="sideNav.toggle()" class="wc-toolbar-toggle-btn">
-      <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
-    </button>
-        <span style="vertical-align:middle;">マスター、ちわちわっ！</span>
-    </div>
-
-    <div class="wc-toolbar-btn-bar">
-        <button mat-icon-button class="wc-toolbar-btn">
-      <mat-icon>message</mat-icon>
-    </button>
-        <button mat-icon-button class="wc-toolbar-btn">
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
-    </div>
-
-</mat-toolbar>
-
 <mat-sidenav-container>
-    <mat-sidenav #sideNav mode="over" fixedInViewport="false">
+    <mat-sidenav #sideNav mode="over" fixedInViewport="true">
         <!-- <mat-sidenav #sideNav mode="over" fixedInViewport="true"> -->
 
         <div class="wc-sidebar-user">
@@ -46,7 +26,7 @@
             <mat-divider></mat-divider>
 
             <h3 matSubheader>示範用頁面</h3>
-            <a class="wc-font-zh" [routerLink]="['/buttondemo']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/demobutton']" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">play_circle_outline</mat-icon> 按鈕樣本
             </a>
             <a class="wc-font-zh" [routerLink]="['/toolbardemo']" mat-list-item>
@@ -62,8 +42,8 @@
             <a class="wc-font-zh" [routerLink]="['/characterlist']" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">people</mat-icon> 角色列表
             </a>
-            <a class="wc-font-zh" [routerLink]="['/listdemo']" mat-list-item>
-                <mat-icon class="wc-sidebar-list-icon">home</mat-icon> 列表樣本
+            <a class="wc-font-zh" [routerLink]="['/exampledeploy']" mat-list-item>
+                <mat-icon class="wc-sidebar-list-icon">cloud_upload</mat-icon> 簡單部屬
             </a>
 
         </mat-nav-list>
@@ -71,6 +51,26 @@
 
     <mat-sidenav-content>
         <!--<button mat-button (click)="sideNav.toggle()">切換左邊選單狀態</button>-->
+
+        <mat-toolbar color="primary" class="wc-toolbar">
+
+            <div class="wc-toolbar-title-bar">
+                <button mat-icon-button (click)="sideNav.toggle()" class="wc-toolbar-toggle-btn">
+            <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+          </button>
+                <span style="vertical-align:middle;">マスター、ちわちわっ！</span>
+            </div>
+
+            <div class="wc-toolbar-btn-bar">
+                <button mat-icon-button class="wc-toolbar-btn">
+            <mat-icon>message</mat-icon>
+          </button>
+                <button mat-icon-button class="wc-toolbar-btn">
+            <mat-icon>exit_to_app</mat-icon>
+          </button>
+            </div>
+
+        </mat-toolbar>
 
         <router-outlet></router-outlet>
 

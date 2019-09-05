@@ -8,10 +8,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule, MatListModule,
-  MatStepperModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatSelectModule
+  MatStepperModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatSelectModule,
+  MatCardModule
 } from '@angular/material';
-// import { ButtonDemoComponent } from './button-demo/button-demo.component';
+
+// 各大主分頁
+import { DemoButtonComponent } from './demo-button/demo-button.component';
 import { HomeComponent } from './home/home.component';
+import { ExampleDeployComponent } from './example-deploy/example-deploy.component';
 // import { ToolbarDemoComponent } from './toolbar-demo/toolbar-demo.component';
 // import { ListDemoComponent } from './list-demo/list-demo.component';
 
@@ -25,11 +29,12 @@ import { CharacterListComponent } from './character-list/character-list.componen
 @NgModule({
   declarations: [
     AppComponent,
-    // ButtonDemoComponent,
     HomeComponent,
+    DemoButtonComponent,
     // ToolbarDemoComponent,
     // ListDemoComponent,
     CharacterListComponent,
+    ExampleDeployComponent,
     // CharacterDetailComponent,
     // CharacterAddComponent
   ],
@@ -49,6 +54,7 @@ import { CharacterListComponent } from './character-list/character-list.componen
     MatInputModule,
     MatAutocompleteModule,
     MatSelectModule,
+    MatCardModule,
     // 表單相關
     FormsModule,
     ReactiveFormsModule,
