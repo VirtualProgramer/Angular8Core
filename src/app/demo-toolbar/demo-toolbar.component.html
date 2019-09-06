@@ -1,0 +1,28 @@
+<div class="wc-router-outlet-container">
+
+    <h3 style="margin-top:0">設定Toolbar的樣式</h3>
+    <mat-toolbar color="primary">這是primary的toolbar</mat-toolbar>
+    <mat-toolbar color="accent">這是accent的toolbar</mat-toolbar>
+    <mat-toolbar color="warn">這是warn的toolbar</mat-toolbar>
+
+    <h3>多行的Toolbar (mat-toolbar-row)</h3>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>第一行Toolbar</span>
+            <span class="toolbar-seprator"></span>
+            <mat-icon>favorite</mat-icon>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            第二行Toolbar
+            <span class="toolbar-seprator"></span>
+            <mat-icon>delete</mat-icon>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <h3>關於MatDrawer (mat-drawer)</h3>
+    <mat-drawer-container style="height:100px;border: 1px solid black">
+        <mat-drawer mode="side" opened="true">Drawer Side</mat-drawer>
+        <mat-drawer-content>Content</mat-drawer-content>
+    </mat-drawer-container>
+
+</div>

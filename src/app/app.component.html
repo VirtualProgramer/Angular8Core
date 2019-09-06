@@ -12,37 +12,37 @@
 
         <!-- 改為以下 list 的方式呈現 -->
         <!--<div class="wc-sidebar-list">
-      <button mat-raised-button color="primary" [routerLink]="['/home']">Home</button>
-      <button mat-raised-button color="primary" [routerLink]="['/buttondemo']">Button Demo</button>
-      <button mat-raised-button color="primary" [routerLink]="['/toolbardemo']">Toolbar Demo</button>
-      <button mat-raised-button color="primary" [routerLink]="['/listdemo']">List Demo</button>
-    </div>-->
+            <button mat-raised-button color="primary" [routerLink]="['/home']">Home</button>
+            <button mat-raised-button color="primary" [routerLink]="['/buttondemo']">Button Demo</button>
+            <button mat-raised-button color="primary" [routerLink]="['/toolbardemo']">Toolbar Demo</button>
+            <button mat-raised-button color="primary" [routerLink]="['/listdemo']">List Demo</button>
+        </div>-->
 
         <mat-nav-list>
-            <a class="wc-font-zh" [routerLink]="['/home']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/home']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">home</mat-icon> 首頁
             </a>
 
             <mat-divider></mat-divider>
 
             <h3 matSubheader>示範用頁面</h3>
-            <a class="wc-font-zh" [routerLink]="['/demobutton']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/demobutton']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">play_circle_outline</mat-icon> 按鈕樣本
             </a>
-            <a class="wc-font-zh" [routerLink]="['/toolbardemo']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/demotoolbar']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">line_style</mat-icon> 功能列樣本
             </a>
-            <a class="wc-font-zh" [routerLink]="['/listdemo']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/demolist']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">list_alt</mat-icon> 列表樣本
             </a>
 
             <mat-divider></mat-divider>
 
             <h3 matSubheader>其他頁面</h3>
-            <a class="wc-font-zh" [routerLink]="['/characterlist']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/characterlist']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">people</mat-icon> 角色列表
             </a>
-            <a class="wc-font-zh" [routerLink]="['/exampledeploy']" mat-list-item>
+            <a class="wc-font-zh" [routerLink]="['/exampledeploy']" (click)="sideNav.toggle()" mat-list-item>
                 <mat-icon class="wc-sidebar-list-icon">cloud_upload</mat-icon> 簡單部屬
             </a>
 
@@ -56,23 +56,27 @@
 
             <div class="wc-toolbar-title-bar">
                 <button mat-icon-button (click)="sideNav.toggle()" class="wc-toolbar-toggle-btn">
-            <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
-          </button>
-                <span style="vertical-align:middle;">マスター、ちわちわっ！</span>
+                    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+                </button>
+                <span class="wc-toolbar-title">マスター、ちわちわっ！</span>
             </div>
 
             <div class="wc-toolbar-btn-bar">
+
                 <button mat-icon-button class="wc-toolbar-btn">
-            <mat-icon>message</mat-icon>
-          </button>
+                    <mat-icon>message</mat-icon>
+                </button>
                 <button mat-icon-button class="wc-toolbar-btn">
-            <mat-icon>exit_to_app</mat-icon>
-          </button>
+                    <mat-icon>exit_to_app</mat-icon>
+                </button>
+
             </div>
 
         </mat-toolbar>
 
-        <router-outlet></router-outlet>
+        <div class="wc-router-outlet-content">
+            <router-outlet></router-outlet>
+        </div>
 
     </mat-sidenav-content>
 </mat-sidenav-container>

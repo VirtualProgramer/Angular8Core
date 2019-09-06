@@ -13,11 +13,11 @@ import {
 } from '@angular/material';
 
 // 各大主分頁
-import { DemoButtonComponent } from './demo-button/demo-button.component';
 import { HomeComponent } from './home/home.component';
+import { DemoButtonComponent } from './demo-button/demo-button.component';
+import { DemoListComponent } from './demo-list/demo-list.component';
+import { DemoToolbarComponent } from './demo-toolbar/demo-toolbar.component';
 import { ExampleDeployComponent } from './example-deploy/example-deploy.component';
-// import { ToolbarDemoComponent } from './toolbar-demo/toolbar-demo.component';
-// import { ListDemoComponent } from './list-demo/list-demo.component';
 
 // CRUD前置作業
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -31,8 +31,8 @@ import { CharacterListComponent } from './character-list/character-list.componen
     AppComponent,
     HomeComponent,
     DemoButtonComponent,
-    // ToolbarDemoComponent,
-    // ListDemoComponent,
+    DemoListComponent,
+    DemoToolbarComponent,
     CharacterListComponent,
     ExampleDeployComponent,
     // CharacterDetailComponent,

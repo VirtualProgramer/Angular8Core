@@ -1,0 +1,7 @@
+mat-toolbar {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.toolbar-seprator {
+    flex: 1 1 auto;
+}
