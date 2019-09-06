@@ -11,9 +11,16 @@
 }
 
 .wc-card {
+    position: relative;
     border: 1px blue solid;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden !important;
     box-sizing: border-box;
-    height: 7em;
+    height: 9em;
+    display: flex;
+}
+
+.wc-card img {
+    width: 100%;
+    position: absolute;
 }
