@@ -1,4 +1,10 @@
 .wc-router-outlet-container {
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+
+/* .wc-router-outlet-container {
     padding-left: 0.5em;
     padding-right: 0.25em;
 }
@@ -8,6 +14,28 @@
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
+} */
+
+.wc-current-news {
+    box-shadow: 0 20px 20px -15px rgba(20%, 20%, 40%, 0.5);
+}
+
+.wc-current-news,
+.wc-news {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+@media (min-width: 768px) {
+    .wc-current-news,
+    .wc-news {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
+.wc-current-news .wc-card {
+    box-shadow: 0 -40px 40px -10px rgba(20%, 20%, 40%, 0.7) inset;
 }
 
 .wc-card {
@@ -16,11 +44,62 @@
     padding: 0;
     overflow: hidden !important;
     box-sizing: border-box;
-    height: 9em;
+    /* height: 10em; */
     display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+/* .wc-card .wc-card-bottom {} */
+
+.wc-card .wc-card-bottom .wc-card-bottomInner {
+    padding: 0.6em;
+}
+
+.wc-card h3,
+.wc-card h4,
+.wc-card h5,
+.wc-card h6 {
+    display: inline-block;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.wc-card h4 {
+    color: rgb(218, 185, 0);
+}
+
+.wc-card h5 {
+    font-weight: normal !important;
+    color: white;
 }
 
 .wc-card img {
     width: 100%;
-    position: absolute;
+    position: relative;
+}
+
+.wc-bg-fill {
+    background-size: cover;
+    background-position: center;
+}
+
+.wc-card.wc-bg-fill {
+    height: 9em;
+}
+
+.bg-api-1 {
+    background-image: url('http://api.btstu.cn/sjbz/?lx=dongman');
+}
+
+.bg-api-2 {
+    background-image: url('https://picsum.photos/300/300/?random');
+}
+
+.bg-api-3 {
+    background-image: url('http://api.btstu.cn/sjbz/?lx=suiji');
+}
+
+.bg-api-4 {
+    background-image: url('http://api.btstu.cn/sjbz/?lx=m_meizi');
 }
