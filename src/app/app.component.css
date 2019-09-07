@@ -44,7 +44,7 @@ mat-sidenav-content {
         margin: 0em 0.25em !important;
     }
     .wc-toolbar .wc-toolbar-btn-bar {
-        padding: 0 8px;
+        padding: 0 4px 0 8px;
     }
 }
 

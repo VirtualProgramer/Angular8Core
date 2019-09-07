@@ -23,6 +23,8 @@ import { ExampleDeployComponent } from './example-deploy/example-deploy.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 // import { CharacterDetailComponent } from './character-detail/character-detail.component';
 // import { CharacterAddComponent } from './character-add/character-add.component';
 
@@ -60,6 +62,7 @@ import { CharacterListComponent } from './character-list/character-list.componen
     ReactiveFormsModule,
     // CRUD
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
